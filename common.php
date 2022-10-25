@@ -306,6 +306,7 @@ function main($path)
             savecache('path_' . $path1, '', $_SERVER['disktag'], 1); // clear cache.
             return $drive->del_upload_cache($path);
         }
+        savecache('path_' . $path1, '', $_SERVER['disktag'], 1); // clear cache.
         if ($_GET['action']=='upbigfile') {
             if (!$_SERVER['admin']) {
                 if (!$_SERVER['is_guestup_path']) return output('Not_Guest_Upload_Folder', 400);
